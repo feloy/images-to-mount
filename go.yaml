@@ -1,0 +1,5 @@
+image: registry.access.redhat.com/hi/go:latest
+init: |
+  alias go='$MOUNT/lib/ld-linux-aarch64.so.1 --library-path $MOUNT/usr/lib64 $MOUNT/usr/lib/golang/bin/go'
+  alias gofmt='$MOUNT/lib/ld-linux-aarch64.so.1 --library-path $MOUNT/usr/lib64 $MOUNT/usr/lib/golang/bin/gofmt'
+  export GOROOT=$MOUNT/usr/lib/golang
