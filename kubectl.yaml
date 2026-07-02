@@ -1,0 +1,3 @@
+image: registry.access.redhat.com/hi/kubectl:latest
+init: |
+  alias kubectl='$MOUNT/lib/ld-linux-aarch64.so.1 --library-path $MOUNT/usr/lib64 $MOUNT/usr/bin/kubectl'
